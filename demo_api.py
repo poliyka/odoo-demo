@@ -8,10 +8,10 @@ from pprint import pprint
 # support None/Null values, and may raise errors when such a value is returned
 # by a method.
 
-url = 'http://0.0.0.0:8069'
+url = 'http://localhost:8069'
 db = 'odoo'
-username = 'admin'
-password = 'admin'
+username = 'jkny3586@gmail.com'
+password = '5ff5aaf1b52ff2bd9ae7e18e03656448e883b6dd'
 
 def common_version():
     # provides meta-calls which don’t require authentication
@@ -378,7 +378,7 @@ def many2many_delete_record_5():
 
 # common_version()
 # get_uid()
-call_check_access_rights()
+# call_check_access_rights()
 # list_all_records()
 # list_records()
 # count_records()
@@ -389,7 +389,7 @@ call_check_access_rights()
 # search_and_read()
 
 # create_reads()
-# update_records()
+update_records()
 # delete_record()
 # many2one_create()
 # many2many_add_record()

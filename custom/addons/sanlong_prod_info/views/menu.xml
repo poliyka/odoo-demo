@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- sanlong_prod_info App Menu -->
+    <menuitem id="sanlong_prod_info_menu"
+              name="Sanlong Prod Info" />
+
+    <!-- Action to open the sanlong_prod_info -->
+    <act_window id="action_prod_info"
+      name="Sanlong Prod Info Action"
+      res_model="sanlong.prod.info"
+      view_mode="tree,form"/>
+
+    <!-- Menu item to open the sanlong_prod_info -->
+    <menuitem id="menu_prod_info"
+              name="Sanlong Prod Info"
+	            action="action_prod_info"
+              parent="sanlong_prod_info_menu" />
+</odoo>
+
+

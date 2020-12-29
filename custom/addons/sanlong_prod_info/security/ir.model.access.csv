@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sanlong_user,Sanlong User Access,model_sanlong_prod_info,sanlong_prod_info_group_user,1,0,0,0
+access_sanlong_manager,Sanlong Manager Access,model_sanlong_prod_info,sanlong_prod_info_group_manager,1,1,1,1

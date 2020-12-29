@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<odoo>
+
+  <record id="module_sanlong_prod_info" model="ir.module.category">
+    <field name="name">Sanlong category</field>
+  </record>
+
+  <record id="sanlong_prod_info_group_user" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id"
+           ref="module_sanlong_prod_info"/>
+    <field name="implied_ids"
+           eval="[(4, ref('base.group_user'))]"/>
+  </record>
+
+  <record id="sanlong_prod_info_group_manager" model="res.groups">
+    <field name="name">Manager</field>
+    <field name="category_id"
+           ref="module_sanlong_prod_info"/>
+    <field name="implied_ids"
+           eval="[(4, ref('sanlong_prod_info_group_user'))]"/>
+    <field name="users"
+           eval="[(4, ref('base.user_root')),
+                  (4, ref('base.user_admin'))]"/>
+  </record>
+
+</odoo>

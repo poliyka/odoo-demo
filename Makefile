@@ -1,5 +1,7 @@
 PYVENV_PREFIX=pipenv run
 LOG_MODE=INFO
+db?=odoo
+md?=sanlong_prod_info
 # Logging reference
 # https://www.odoo.com/documentation/14.0/reference/cmdline.html
 # https://odoo-development.readthedocs.io/en/latest/admin/log-handler.html#usefull-logs
@@ -13,3 +15,6 @@ lint:
 
 run:
 	$(PYVENV_PREFIX) python3 odoo-server/odoo-bin --syslog --log-handler :$(LOG_MODE) -c /etc/odoo-server.conf
+
+migrate:
+	$(PYVENV_PREFIX) python3 odoo-server/odoo-bin --syslog --log-handler :$(LOG_MODE) -c /etc/odoo-server.conf -d $(db) -u $(md)

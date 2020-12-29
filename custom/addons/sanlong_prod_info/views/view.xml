@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record id="view_form_sanlong_prod_info" model="ir.ui.view">
+    <field name="name">Sanlong Prod Info Form</field>
+    <field name="model">sanlong.prod.info</field>
+    <field name="arch" type="xml">
+      <form string="Sanlong Prod Info">
+        <sheet>
+          <group>
+            <field name="mysql_id"/>
+            <field name="slPN"/>
+            <field name="customPN"/>
+            <field name="backPN"/>
+            <field name="colorNO"/>
+            <field name="mould"/>
+            <field name="standardSec"/>
+            <field name="category"/>
+            <field name="TRDH_T_LINE"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+          <field name="message_follower_ids" widget="mail_followers"/>
+          <field name="activity_ids" widget="mail_activity"/>
+          <field name="message_ids" widget="mail_thread"/>
+        </div>
+      </form>
+    </field>
+  </record>
+  
+  <record id="view_tree_sanlong_prod_info" model="ir.ui.view">
+    <field name="name">Sanlong Prod Info List</field>
+    <field name="model">sanlong.prod.info</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="slPN"/>
+        <field name="customPN"/>
+        <field name="backPN"/>
+        <field name="colorNO"/>
+        <field name="standardSec"/>
+        <field name="TRDH_T_LINE"/>
+      </tree>
+    </field>
+  </record>
+</odoo>
