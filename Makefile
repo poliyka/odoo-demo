@@ -14,7 +14,22 @@ lint:
 	$(PYVENV_PREFIX) flake8 custom
 
 run:
-	$(PYVENV_PREFIX) python3 odoo-server/odoo-bin --syslog --log-handler :$(LOG_MODE) -c /etc/odoo-server.conf
+	$(PYVENV_PREFIX) python3 odoo-server/odoo-bin -c /etc/odoo-server.conf
 
 migrate:
-	$(PYVENV_PREFIX) python3 odoo-server/odoo-bin --syslog --log-handler :$(LOG_MODE) -c /etc/odoo-server.conf -d $(db) -u $(md)
+	$(PYVENV_PREFIX) python3 odoo-server/odoo-bin -u $(md) -d $(db) --dev=all
+
+start_service:
+	sudo service postgresql start
+	sudo service mysql start
+	sudo service apache2 start
+
+stop_service:
+	sudo service postgresql stop
+	sudo service mysql stop
+	sudo service apache2 stop
+
+restart_service:
+	sudo service postgresql restart
+	sudo service mysql restart
+	sudo service apache2 restart
